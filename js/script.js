@@ -29,15 +29,15 @@
 })(jQuery);
 
 
-(function($) {
-    $(function() {
-        $('ul.services__tabs-caption').on('click', 'li:not(.services__tabs-active)', function() {
-            $(this)
-                .addClass('services__tabs-active').siblings().removeClass('services__tabs-active')
-                .closest('div.services-tabs').find('div.services__tabs-content').removeClass('services__tabs-active').eq($(this).index()).addClass('services__tabs-active');
-        });
-    });
-})(jQuery);
+// (function($) {
+//     $(function() {
+//         $('ul.services__tabs-caption').on('click', 'li:not(.services__tabs-active)', function() {
+//             $(this)
+//                 .addClass('services__tabs-active').siblings().removeClass('services__tabs-active')
+//                 .closest('div.services-tabs').find('div.services__tabs-content').removeClass('services__tabs-active').eq($(this).index()).addClass('services__tabs-active');
+//         });
+//     });
+// })(jQuery);
 
 
 $(document).ready(function(){
@@ -81,23 +81,23 @@ $( function() {
       $titleInWindow.removeClass('deactive');
       $titleInWindow.addClass('show__services-element');
 
-      var $itemMarketingInWindow = inWindow('.marketing-item')
-      $itemMarketingInWindow.removeClass('deactive')
+      var $itemMarketingInWindow = inWindow('.marketing-item');
+      $itemMarketingInWindow.removeClass('deactive');
 
-      var $itemWebDesignInWindow = inWindow('.web-design-item')
-      $itemWebDesignInWindow.removeClass('deactive')
+      var $itemWebDesignInWindow = inWindow('.web-design-item');
+      $itemWebDesignInWindow.removeClass('deactive');
 
-      var $itemECommerceInWindow = inWindow('.e-commerce-item')
-      $itemECommerceInWindow.removeClass('deactive')
+      var $itemECommerceInWindow = inWindow('.e-commerce-item');
+      $itemECommerceInWindow.removeClass('deactive');
 
-      var $itemWebDevelopmentInWindow = inWindow('.web-development-item')
-      $itemWebDevelopmentInWindow.removeClass('deactive')
+      var $itemWebDevelopmentInWindow = inWindow('.web-development-item');
+      $itemWebDevelopmentInWindow.removeClass('deactive');
 
-      var $itemFreeSupportInWindow = inWindow('.free-support-item')
-      $itemFreeSupportInWindow.removeClass('deactive')
+      var $itemFreeSupportInWindow = inWindow('.free-support-item');
+      $itemFreeSupportInWindow.removeClass('deactive');
 
-      var $itemAppDevelopmentInWindow = inWindow('.app-development-item')
-      $itemAppDevelopmentInWindow.removeClass('deactive')
+      var $itemAppDevelopmentInWindow = inWindow('.app-development-item');
+      $itemAppDevelopmentInWindow.removeClass('deactive');
     }
   });
 
@@ -132,3 +132,42 @@ function closeFeedback() {
 
 document.getElementById('feedback__button').addEventListener('click', openFeedback);
 document.getElementById('close-window').addEventListener('click', closeFeedback);
+//СКРИПТ ДЛЯ НОВОГО БЛОКА УСЛУГ
+$(function () {
+  console.log('stadt');
+
+var fooReveal = {
+  origin: 'bottom',
+  delay    : 500,
+  distance : '190px',
+  easing   : 'ease-in-out',
+  // rotate   : { z: 10 },
+  scale    : 1.1
+};
+var fooRev = {
+  origin: 'bottom',
+  delay    : 750,
+  distance : '350px',
+  easing   : 'ease-in-out',
+  // rotate   : { z: 10 },
+  scale    : 1.1
+};
+var fooRev3 = {
+  origin: 'bottom',
+  delay    : 750,
+  distance : '500px',
+  easing   : 'ease-in-out',
+  // rotate   : { z: 10 },
+  scale    : 1.1
+};
+
+window.sr = ScrollReveal();
+sr.reveal('.foo', fooReveal);
+sr.reveal('.foo_1', fooReveal);
+sr.reveal('.foo_2', fooRev);
+sr.reveal('.foo_3', fooRev);
+sr.reveal('.foo_4', fooRev3);
+sr.reveal('.foo_5', fooRev3);
+})
+
+//КОНЕЦ НОВОГО БЛОКА УСЛУГ

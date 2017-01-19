@@ -41,7 +41,7 @@ body {
     width: 100%;
     position: relative;
     height: 650px;
-    background: url('../img/header/h_page.jpg') 100% 100% no-repeat;
+    background: url('../img/header/bg-2.jpg') 100% 100% no-repeat;
     background-size: cover;
 }
 
@@ -154,7 +154,7 @@ body {
 }
 .production__04 {
   background: #E73C5A;
-
+}
   /*-------End "services__idea"------*/
 .about-offer-inner {
   width: 25%;
@@ -174,7 +174,6 @@ body {
 .services-title {
     margin: 24px auto;
     padding-top: 60px;
-
     text-align: center;
 }
 
@@ -200,7 +199,6 @@ body {
 .services__content-item {
   height: 150px;
   width: 400px;
-
   position: absolute;
   left: 0;
 }
@@ -861,7 +859,44 @@ p,
 h1 {
     cursor: default;
 }
+/*CSS ДЛЯ НОВОГО БЛОКА УСЛУГ*/
+#services {
+    display: block;
+    height: 830px;
+    padding: 30px;
+    font-size: 20px;
+    background: url('../img/header/dark_brick_wall.png') repeat;
+}
+#services .row-services {
+    text-align: center;
+    font-size: 24px;
+}
+.row-services {
+  color: #fff;
+  text-align: center;
+}
+.row-services h2  {
+  font-weight: bold;
 
+}
+#fooContainer p {
+  color: #fff;
+  text-align: justify;
+}
+#fooContainer h4 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+#fooContainer {
+  padding: 15px 10px ;
+}
+#fooContainer:hover {
+    background-color: #e62b4c;
+
+}
+/*КОНЕЦ НОВОГО БЛОКА УСЛУГ*/
 @media (max-width: 936px) {
     .feedback__form {
         width: 70%;

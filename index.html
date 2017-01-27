@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fm.revealator.jquery.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script>
+  
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
     <script src="js/fm.revealator.jquery.js"></script>
     <script src="js/jquery.jcarousel.js"></script>
-      <script src="js/title.js"></script><!-- js для заголовка -->
+
+    <script src="js/title.js"></script><!-- js для заголовка -->
     <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <!--[if lte IE 9]>
         <script src="http://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -22,34 +24,59 @@
 </head>
 
 <body>
+  <!-- <a href="#" id="logo"></a>
+
+<nav>
+
+<a href="#" id="menu-icon"></a>
+
+<ul>
+
+<li><a href="#" class="current">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Work</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header> -->
+
     <header class="header anchor" id="top">
-        <section class="top-header">
+
+        <div class="cd-secondary-nav">
             <div class="container top-header__container clearfix">
                 <a href="/" class="logo">reddino</a>
 
                 <nav class="menu top-header__menu">
+                  <a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
                     <!-- ВСТАВИТЬ ССЫЛКИ -->
-                    <a href="#top" class="menu__item menu__item-active">Главная</a>
-                    <a href="#services" class="menu__item">Услуги</a>
-                    <!-- <a href="#" class="menu__item">Наши работы</a> -->
-                    <a href="#about" class="menu__item">О нас</a>
-                    <a href="#blog" class="menu__item">Блог</a>
-                    <a href="#contacts" class="menu__item">Контакты</a>
+                    <ul>
+                        <li><a href="#top" class="menu__item menu__item-active">Главная</a></li>
+                        <li><a href="#services" class="menu__item">Услуги</a></li>
+                        <li><a href="#about" class="menu__item">О нас</a></li>
+                        <li><a href="#about" class="menu__item">Цены</a></li>
+                        <li><a href="#work" class="menu__item">Наши работы</a></li>
+                        <li><a href="#blog" class="menu__item">Блог</a></li>
+                        <li><a href="#contacts" class="menu__item">Контакты</a></li>
+                    </ul>
                 </nav>
             </div>
-        </section>
-        <!-- cd-intro -->
-        <section class="cd-intro">
-            	<h1 class="cd-headline clip is-full-width tagline-wrapper">
-        			<span></span>
-        			<span class="cd-words-wrapper">
-        				<b class="is-visible">Welcome To <span class="tagline__reddino">reddino</span></b>
-        				<!-- <b>Welcome To <span class="tagline__reddino">reddino</span></b>
-        				<b>Welcome To <span class="tagline__reddino">reddino</span></b> -->
-        			</span>
-        		</h1>
 
-        </section>
+            <section id="cd-intro">
+              <h1 class="cd-headline clip is-full-width tagline-wrapper">
+                <span></span>
+                <span class="cd-words-wrapper">
+                  <b class="is-visible">Welcome To <span class="tagline__reddino">reddino</span></b>
+                  <!-- <b>Welcome To <span class="tagline__reddino">reddino</span></b>
+                  <b>Welcome To <span class="tagline__reddino">reddino</span></b> -->
+                </span>
+              </h1>
+
+            </section>
+
         <!-- cd-intro -->
         <!-- <div class="tagline-wrapper">
             <p class="tagline">Welcome To <span class="tagline__reddino">reddino</span></p>
@@ -59,22 +86,53 @@
 
     <!-- БЛОКИ РАССТАВЛЕНЫ СОГЛАСНО МАКЕТУ -->
     <section class="services__idea">
-        <div class="top-services idea__01">
-          <h3 class="idea__title">01 Idea</h3>
-          <p class="idea__text">Знакомимся с идеей - обсуждаем направление - предлагаем концепт будущего продукта.</p>
-        </div>
-        <div class="top-services design__02">
-          <h3 class="idea__title idea-design-title">02 Design</h3>
-          <p class="idea__text idea-design-text">Разрабатываем дизайн - рисуем макет - утверждаем - начинаем верстку.</p>
-        </div>
-        <div class="top-services develop__03">
-          <h3 class="idea__title idea-develop-title">03 Develop</h3>
-          <p class="idea__text dea-develop-text">Верстаем - программируем - добавляем динамики - тестируем. Сайт оживает. </p>
-        </div>
-        <div class="top-services production__04">
-          <h3 class="idea__title idea-production-title">04 Lounch</h3>
-          <p class="idea__text idea-production-text">Отдаем готовый, протестированный продукт, разработанный на основе передовых технологий.</p>
-        </div>
+<!--
+      <div class="col-sm-6 col-md-3 col-xs-12 no-padding">
+                <div class="work__wrapper">
+                    <a href="#" class="work__overlay">
+                        <div class="work__overlay-inner">
+                            <h4 class="work__overlay-base">Creative Design</h4>
+                            <div class="work__overlay-line"></div>
+                            <p>Print Media</p>
+                        </div>
+                    </a>
+                    <img src="img/work/3.jpg" alt="">
+                </div>
+            </div> -->
+
+            <div class="top-services idea__01 col-sm-3 no-padding">
+              <div class="work__wrapper">
+                <h3 class="idea__title">01 Idea</h3>
+                <a href="#" class="work__overlay">
+                    <div class="work__overlay-inner">
+                        <div class="work__overlay-line"></div>
+                        <p>Знакомимся с идеей - обсуждаем направление - предлагаем концепт будущего продукта</p>
+                    </div>
+                </a>
+              </div>
+            </div>
+
+
+
+            <div class="top-services design__02 col-sm-3 no-padding">
+              <div class="">
+                <h3 class="idea__title idea-design-title">02 Design</h3>
+                <p class="idea__text idea-design-text">Разрабатываем дизайн - рисуем макет - утверждаем - начинаем верстку.</p>
+              </div>
+            </div>
+            <div class="top-services develop__03 col-sm-3 no-padding">
+              <div class="">
+                <h3 class="idea__title idea-develop-title">03 Develop</h3>
+                <p class="idea__text dea-develop-text">Верстаем - программируем - добавляем динамики - тестируем. Сайт оживает. </p>
+              </div>
+            </div>
+            <div class="top-services production__04 col-sm-3 no-padding">
+              <div class="">
+                <h3 class="idea__title idea-production-title">04 Lounch</h3>
+                <p class="idea__text idea-production-text">Отдаем готовый, протестированный продукт, разработанный на основе передовых технологий.</p>
+              </div>
+            </div>
+
     </section>
     <div class="clearfix"></div>
     <!-- <section class="about-offer clearfix">
@@ -171,9 +229,7 @@
     <!-- КОНЕЦ БЛОКА УСЛУГИ -->
 
     <section class="services anchor " id="services">
-<div class="test__servieces">
-
-
+<div class="conteiner__servieces">
       <div class="row-services">
         <h2>Услуги</h2>
         <p>Новый формат творческого агенства, которое заботится о серьезных проблемах</p>

@@ -39,36 +39,36 @@
 //     });
 // })(jQuery);
 
-
-$(document).ready(function(){
-    $(".top-header__menu").on("click","a", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
-        //забираем идентификатор бока с атрибута href
-        var id  = $(this).attr('href'),
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-        //меняем цвет ссылки в меню
-        $(this).addClass('menu__item-active').siblings().removeClass('menu__item-active');
-    });
-
-   $(window).scroll(function(){
-      $topHeaderHeight = $('.top-header').height();
-      //для каждого блока с классом "anchor" выполняем следующее
-      $('.anchor').each(function() {
-          var $scrollTop = $(window).scrollTop(); //определяем величину прокрутки
-          var $anchorOffsetTop = $(this).offset().top; //определяем отступ блока с классом "anchor" от верха страницы
-          var $anchorId = $(this).attr('id'); // получаем id блока с классом "anchor", до которого выполнилась прокрутка
-
-          if ($scrollTop > $anchorOffsetTop-$topHeaderHeight) {
-              $('.top-header__menu').find('a').removeClass('menu__item-active');
-              $('.top-header__menu').find('a[href="#' + $anchorId + '"]').addClass('menu__item-active');
-          };
-      });
-   });
-
-});
+//
+// $(document).ready(function(){
+//     $(".top-header__menu").on("click","a", function (event) {
+//         //отменяем стандартную обработку нажатия по ссылке
+//         event.preventDefault();
+//         //забираем идентификатор бока с атрибута href
+//         var id  = $(this).attr('href'),
+//         //узнаем высоту от начала страницы до блока на который ссылается якорь
+//         top = $(id).offset().top;
+//         $('body,html').animate({scrollTop: top}, 1500);
+//         //меняем цвет ссылки в меню
+//         $(this).addClass('menu__item-active').siblings().removeClass('menu__item-active');
+//     });
+//
+//    $(window).scroll(function(){
+//       $topHeaderHeight = $('.top-header').height();
+//       //для каждого блока с классом "anchor" выполняем следующее
+//       $('.anchor').each(function() {
+//           var $scrollTop = $(window).scrollTop(); //определяем величину прокрутки
+//           var $anchorOffsetTop = $(this).offset().top; //определяем отступ блока с классом "anchor" от верха страницы
+//           var $anchorId = $(this).attr('id'); // получаем id блока с классом "anchor", до которого выполнилась прокрутка
+//
+//           if ($scrollTop > $anchorOffsetTop-$topHeaderHeight) {
+//               $('.top-header__menu').find('a').removeClass('menu__item-active');
+//               $('.top-header__menu').find('a[href="#' + $anchorId + '"]').addClass('menu__item-active');
+//           };
+//       });
+//    });
+//
+// });
 
 
 /*Скрипт для появления блока услуг*/
@@ -169,6 +169,29 @@ sr.reveal('.foo_3', fooRev);
 sr.reveal('.foo_4', fooRev3);
 sr.reveal('.foo_5', fooRev3);
 })
+
+
+var secondaryNav = $('.cd-secondary-nav'),
+secondaryNavTopPosition = secondaryNav.offset().top;
+console.log(secondaryNav);
+$(window).on('scroll', function(){
+
+if($(window).scrollTop() > secondaryNavTopPosition ) {
+secondaryNav.addClass('is-fixed');
+setTimeout(function() {
+secondaryNav.addClass('animate-children');
+$('.logo').addClass('slide-in');
+$('.cd-btn').addClass('slide-in');
+}, 50);
+} else {
+secondaryNav.removeClass('is-fixed');
+setTimeout(function() {
+secondaryNav.removeClass('animate-children');
+$('.logo').removeClass('slide-in');
+$('.cd-btn').removeClass('slide-in');
+}, 50);
+}
+});
 
 //КОНЕЦ НОВОГО БЛОКА УСЛУГ
 
